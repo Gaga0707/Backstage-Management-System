@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+<title>新增档案</title>
+<link rel="icon" href="../favicon.ico" type="image/ico">
+<link href="{{ url_for('static', filename='css/bootstrap.min.css') }}" rel="stylesheet">
+<link href="{{ url_for('static', filename='css/materialdesignicons.min.css') }}" rel="stylesheet">
+<link href="{{ url_for('static', filename='css/style.min.css') }}" rel="stylesheet">
+<!--标签插件-->
+<link rel="stylesheet" href="{{ url_for('static', filename='js/jquery-tags-input/jquery.tagsinput.min.js') }}">
+<link href="{{ url_for('static', filename='css/style.min.css') }}" rel="stylesheet">
+
+</head>
+  
+<body>
+<div class="container-fluid">
+
+  <div class="row">
+    <div class="col-lg-12">
+      <div class="card">
+        <div class="card-body">
+
+          <form action="http://127.0.0.1:5000/category_add" method="post" class="row">
+
+            <div class="form-group col-md-12">
+              <label for="title">仓库名称</label>
+              <input type="text" class="form-control" id="title" name="ck_name" value="" placeholder="请输入仓库名称var" />
+            </div>
+            <div class="form-group col-md-12">
+              <label for="title">客户名称</label>
+              <input type="text" class="form-control" id="title" name="kh_name" value="" placeholder="请输入客户名称var" />
+            </div>
+            <div class="form-group col-md-12">
+              <label for="title">区域/楼层</label>
+              <input type="text" class="form-control" id="title" name="region" value="" placeholder="请输入区域或楼层int" />
+            </div>
+            <div class="form-group col-md-12">
+              <label for="title">组别</label>
+              <input type="text" class="form-control" id="title" name="gg" value="" placeholder="请输入组别var" />
+            </div>
+            <div class="form-group col-md-12">
+              <label for="title">仓库列</label>
+              <input type="text" class="form-control" id="title" name="ck_column" value="" placeholder="请输入仓库列var" />
+            </div>
+            <div class="form-group col-md-12">
+              <label for="title">仓库排</label>
+              <input type="text" class="form-control" id="title" name="ck_row" value="" placeholder="请输入仓库排int" />
+            </div>
+            <div class="form-group col-md-12">
+              <label for="title">层</label>
+              <input type="text" class="form-control" id="title" name="layer" value="" placeholder="请输入层int" />
+            </div>
+            <div class="form-group col-md-12">
+              <label for="title">箱号</label>
+              <input type="text" class="form-control" id="title" name="box_num" value="" placeholder="请输入箱号var" />
+            </div>
+            <div class="form-group col-md-12">
+              <label for="type">档案类别</label>
+              <div class="form-controls">
+                <select name="records_series" class="form-control" id="type">
+                  <option value="civil">民事</option>
+                  <option value="economy">经济</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-group col-md-12">
+              <label for="type">档案期限</label>
+              <div class="form-controls">
+                <select name="records_date" class="form-control" id="type">
+                  <option value="temporory">短期</option>
+                  <option value="lasting">永久</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-group col-md-12">
+              <label for="title">盒号</label>
+              <input type="text" class="form-control" id="title" name="box2_num" value="" placeholder="请输入盒号int" />
+            </div>
+            <div class="form-group col-md-12">
+              <label for="title">货位号</label>
+              <input type="text" class="form-control" id="title" name="goods_num" value="" placeholder="请输入货位号int" />
+            </div>
+            <div class="form-group col-md-12">
+              <button type="submit" class="btn btn-primary ajax-post" target-form="add-form">确 定</button>
+              <button type="button" class="btn btn-default" onclick="javascript:history.back(-1);return false;">返 回</button>
+
+            </div>
+          </form>
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</div>
+
+<script type="text/javascript" src="{{ url_for('static', filename='js/jquery.min.js') }}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='js/perfect-scrollbar.min.js') }}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='js/main.min.js') }}"></script>
+
+<!--标签插件-->
+<script src="{{ url_for('static', filename='js/jquery-tags-input/jquery.tagsinput.min.js') }}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='js/main.min.js') }}"></script>
+</body>
+</html>
